@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+:root {
+  --pink: #555555;
+  --pink-dark: #222222;
+  --pink-light: #e8e8e8;
+  --cream: #fafafa;
+  --ink: #383838;
+}
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; min-height: 100vh; color: var(--ink);
+  background: radial-gradient(circle at 15% 10%, #eeeeee 0, transparent 32%),
+              radial-gradient(circle at 85% 85%, #e5e5e5 0, transparent 30%), var(--cream);
+  font-family: Georgia, serif;
+}
+.sparkles { position: fixed; inset: 0 0 auto; text-align: center; padding: 12px; color: #999999; opacity: .55; pointer-events: none; letter-spacing: 10px; z-index: 0; }
+.topbar { position: relative; z-index: 2; width: min(1100px, 94%); margin: 24px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.brand { color: #222222; font: italic 20px "Cormorant Garamond", Georgia, serif; white-space: nowrap; }
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; padding: 7px; background: #ededed; border: 1px solid #d5d5d5; border-radius: 30px; }
+button { cursor: pointer; }
+.nav-btn { border: 0; background: transparent; color: #555555; border-radius: 22px; padding: 9px 13px; font: italic 15px "Cormorant Garamond", Georgia, serif; }
+.nav-btn.active, .nav-btn:hover { background: #fafafa; color: #222222; }
+main { width: min(1000px, 92%); margin: 34px auto 70px; position: relative; z-index: 1; }
+.page { display: none; animation: fade .55s ease both; }
+.page.active { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+#welcome { min-height: 68vh; display: none; place-items: center; }
+#welcome.active { display: grid; }
+.welcome-card { text-align: center; padding: 55px 24px; width: min(680px, 100%); }
+.eyebrow { color: #777777; letter-spacing: 2px; text-transform: uppercase; font: 13px Georgia, serif; }
+.moon { color: #777777; font-size: 42px; margin: 16px; }
+h1, h2 { color: #222222; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 500; }
+h1 { font-size: clamp(42px, 8vw, 76px); line-height: .98; margin: 12px 0; }
+h1 span { color: #555555; }
+.subtitle { color: #777777; font: italic 20px "Cormorant Garamond", Georgia, serif; }
+.primary-btn, .soft-btn { border: 1px solid #bdbdbd; color: #333333; background: #eeeeee; border-radius: 30px; padding: 13px 24px; font: italic 17px "Cormorant Garamond", Georgia, serif; transition: .2s; }
+.primary-btn { margin-top: 22px; }
+.primary-btn:hover, .soft-btn:hover { transform: translateY(-2px); background: #dddddd; }
+.section-heading { text-align: center; margin: 30px auto 28px; }
+.section-heading h2 { font-size: clamp(34px, 6vw, 52px); margin: 7px 0; }
+.video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.video-card { margin: 0; padding: 12px 12px 8px; background: #fff; border: 1px solid #dddddd; border-radius: 8px; box-shadow: 0 8px 25px #b96d7a12; }
+.video-card video { width: 100%; max-height: 430px; aspect-ratio: 4 / 3; object-fit: contain; background: #e9e9e9; border-radius: 4px; }
+.video-card figcaption { text-align: center; padding: 9px 4px 3px; color: #555555; font: italic 18px "Cormorant Garamond", Georgia, serif; }
+.love-note { width: min(760px, 100%); margin: 0 auto; padding: 24px 26px 35px; text-align: center; }
+.love-note p { color: #555555; font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(19px, 2.6vw, 25px); line-height: 1.42; margin: 0 auto 38px; }
+.love-note p:first-child { font-size: clamp(22px, 3vw, 29px); }
+.page-actions { text-align: center; margin: 22px 0 45px; }
+.letter-wrap { min-height: 65vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px 10px; }
+.envelope { width: 220px; height: 145px; border: 1px solid #bdbdbd; border-radius: 8px; background: linear-gradient(145deg, #eeeeee, #cccccc); box-shadow: 0 12px 30px #9e59631c; color: #444444; display: grid; place-content: center; gap: 6px; transition: .3s; }
+.envelope:hover { transform: translateY(-5px) rotate(-1deg); }
+.envelope-heart { font-size: 42px; }
+.envelope-label { font: italic 17px "Cormorant Garamond", Georgia, serif; }
+.letter-content { width: min(600px, 100%); margin: 25px auto; padding: 28px; background: #fff; border: 1px solid #d5d5d5; box-shadow: 0 12px 35px #00000012; animation: fade .6s ease; }
+.letter-content h2 { font-size: 34px; }
+.letter-content p { color: #555555; font: italic 22px/1.5 "Cormorant Garamond", Georgia, serif; }
+.signature { margin-top: 30px; }
+.closing { color: #222222; font: italic 23px "Cormorant Garamond", Georgia, serif; margin-top: 28px; }
+footer { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; gap: 18px; padding: 18px; color: #777777; font: italic 15px "Cormorant Garamond", Georgia, serif; }
+.music-btn { border: 1px solid #d0d0d0; border-radius: 20px; background: #fff; color: #444444; padding: 8px 14px; font: italic 15px "Cormorant Garamond", Georgia, serif; }
+@media (max-width: 700px) {
+  .topbar { flex-direction: column; }
+  nav { width: 100%; }
+  .nav-btn { padding: 8px 10px; font-size: 14px; }
+  main { margin-top: 15px; }
+  .video-grid { grid-template-columns: 1fr; gap: 16px; }
+  .love-note { padding: 15px 8px; }
+  .love-note p { margin-bottom: 30px; line-height: 1.38; }
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 700px;
+}
+
+.video-grid video {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 15px;
+    object-fit: contain;
+    background: #000;
+}
+.music-player {
+    text-align: center;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    background: #292929;
+    color: white;
+    border-radius: 15px;
+}
+
+.music-player audio {
+    width: 100%;
+}
+/* TOMBOL MUSIK KECIL DI KANAN ATAS */
+.music-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #333333;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.music-icon:hover {
+    background: #e5e5e5;
+    transform: scale(1.1);
+}

@@ -1,0 +1,18 @@
+WEBSITE ULANG TAHUN ALDI - VERSI DENGAN MUSIK
+
+Isi folder:
+- index.html
+- script.js
+- style.css
+- music/masa-ini-nanti.mp3
+
+PENTING:
+1. Letakkan folder "videos" yang berisi "vidio.mp4" di samping index.html,
+   sama seperti struktur project sebelumnya.
+2. Buka folder project ini di VS Code.
+3. Jalankan index.html menggunakan Live Server.
+4. Browser biasanya membatasi autoplay dengan suara. Website akan mencoba
+   memutar lagu saat dibuka; jika diblokir, klik bagian mana pun pada halaman
+   atau tombol "Music" di footer untuk memulai musik.
+5. Tombol "Music: on/off" mengontrol lagu yang sama. Musik tidak dibuat
+   sebagai pemutar terpisah sehingga tidak saling bertabrakan.
